@@ -152,7 +152,7 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:24px">Complementary Cues from Audio Help Combat Noise in Weakly-Supervised Object Detection</span>
+		<span style="font-size:24px">Boosting Weakly Supervised Object Detection using Fusion and Priors from Hallucinated Depth</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
@@ -175,11 +175,15 @@
 							<span style="font-size:20px"><a href='https://cagrigungor.github.io/AudioVisualWSOD/resources/0391.pdf'>[Paper]</a></span>
 						</center>
 					</td>
-					
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href=''>[Code]</a></span>
+						</center>
+					</td>
 				</tr>
 			</table>
 		</table>
-		<span style="font-size:16px">To appear in 2023 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2023) </span>
+		<span style="font-size:16px">To appear in 2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2024) </span>
 	</center>
 	
 	<hr>
@@ -189,7 +193,7 @@
 			<tr>
 				<td width=360px>
 					<center>
-						<img class="round" style="width:800px" src="./resources/concept_fig_old.png"/>
+						<img class="round" style="width:800px" src="./resources/concept_wsod_amplifier.png"/>
 					</center>
 				</td>
 			</tr>
@@ -197,7 +201,7 @@
 		<table align=center width=850px>
 			<tr>
 				<td style="text-align:justify">
-					Illustration of one of our contributions which utilizes complementary audio cues. Our method includes a region-based audio-visual instance discrimination module which produces an audio-visual region similarity, in conjunction with the visual classification scores, to create an indirect visual path through audio and improve the accuracy of predicted object labels.
+					Object from the same category may be at different depth depending on the context/setting. We use captions to capture context-conditioned depth ranges for each object class and co-occurring word: a bird may be closer when co-occurring with the word “feed” than the word “ocean”. We use these ranges to spot relevant proposals that may contain target objects, and prune irrelevant ones, in weakly supervised object detection training.
 				</td>
 			</tr>
 		</table>
@@ -209,8 +213,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td style="text-align:justify">
-				We tackle the problem of learning object detectors in a noisy environment, which is one of the significant challenges for weakly-supervised learning. We use multimodal learning to help localize objects of interest, but unlike other methods, we treat audio as an auxiliary modality that assists to tackle noise in detection from visual regions. First, we use the audio-visual model to generate new ''ground-truth'' labels for the training set to remove noise between the visual features and noisy supervision. Second, we propose an ''indirect path'' between audio and class predictions, which combines the link between visual and audio regions, and the link between visual features and predictions. Third, we propose a sound-based ''attention path'' which uses the benefit of complementary audio cues to identify important visual regions. We use contrastive learning in our framework to perform region-based audio-visual instance discrimination for sound localization that is used as an intermediate task to benefit from the complementary cues from audio to boost object classification and detection performance. We show our methods to update noisy ground-truth and to provide an indirect path and attention path, greatly boosting performance on the AudioSet and VGGSound datasets compared to single-modality predictions, even ones that use contrastive learning. Our method outperforms previous weakly-supervised detectors for the task of object detection and our sound localization module performs better than several state-of-art methods on the AudioSet and MUSIC datasets.
-			</td>
+			Despite recent attention to depth for various tasks, it is still an unexplored modality for weakly-supervised object detection (WSOD). We propose an amplifier method for enhancing the performance of WSOD by integrating depth information. Our approach can be applied to different WSOD methods based on multiple-instance learning, without necessitating additional annotations or inducing large computational cost. Our proposed method employs monocular depth estimation to obtain hallucinated depth information, which is then incorporated into a Siamese WSOD network using contrastive loss and fusion. By analyzing the relationship between language context and depth, we calculate depth priors to identify the bounding box proposals that may contain an object of interest. These depth priors are then utilized to update the list of pseudo ground-truth boxes, or adjust the confidence of per-box predictions. We evaluate our proposed method on three datasets (COCO, PASCAL VOC, and Conceptual Captions) by implementing it on top of two state-of-the-art WSOD methods, and we demonstrate a substantial enhancement in performance.			</td>
 		</tr>
 	</table>
 	<br>
@@ -229,7 +232,7 @@
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:750px" src="./resources/main_figure.png"/></td>
+					<td><img class="round" style="width:750px" src="./resources/main_wsod_amplifier.png"/></td>
 				</center>
 			</td>
 		</tr>
