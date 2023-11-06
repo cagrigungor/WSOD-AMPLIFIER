@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>Complementary Cues from Audio Help Combat Noise in Weakly-Supervised Object Detection</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -131,30 +131,39 @@
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'UA-75863369-6');
+		gtag('config', 'G-2RRTVHCD9N');
 	</script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript"
+	  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+	<!-- (A) LOAD THE MATHJAX LIBRARY -->
+	<!-- DOCS: https://docs.mathjax.org/en/latest/basic/mathematics.html -->
+	<!-- DEMO: https://github.com/mathjax/MathJax-demos-web -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Complementary Cues from Audio Help Combat Noise in Weakly-Supervised Object Detection</span>
+		<span style="font-size:24px">Complementary Cues from Audio Help Combat Noise in Weakly-Supervised Object Detection</span>
 		<table align=center width=600px>
 			<table align=center width=600px>
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:20px"><a href="https://cagrigungor.github.io/">Cagri Gungor</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:20px"><a href="https://people.cs.pitt.edu/~kovashka/">Adriana Kovashka</a></span>
 						</center>
 					</td>
 				</tr>
@@ -163,33 +172,32 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:20px"><a href='https://cagrigungor.github.io/AudioVisualWSOD/resources/0391.pdf'>[Paper]</a></span>
 						</center>
 					</td>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
-						</center>
-					</td>
+					
 				</tr>
 			</table>
 		</table>
+		<span style="font-size:16px">To appear in 2023 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2023) </span>
 	</center>
-
+	
+	<hr>
+	
 	<center>
 		<table align=center width=850px>
 			<tr>
-				<td width=260px>
+				<td width=360px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:800px" src="./resources/concept_fig_old.png"/>
 					</center>
 				</td>
 			</tr>
 		</table>
 		<table align=center width=850px>
 			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
+				<td style="text-align:justify">
+					Illustration of one of our contributions which utilizes complementary audio cues. Our method includes a region-based audio-visual instance discrimination module which produces an audio-visual region similarity, in conjunction with the visual classification scores, to create an indirect visual path through audio and improve the accuracy of predicted object labels.
 				</td>
 			</tr>
 		</table>
@@ -200,31 +208,14 @@
 	<table align=center width=850px>
 		<center><h1>Abstract</h1></center>
 		<tr>
-			<td>
-				This is my abstract.
+			<td style="text-align:justify">
+				We tackle the problem of learning object detectors in a noisy environment, which is one of the significant challenges for weakly-supervised learning. We use multimodal learning to help localize objects of interest, but unlike other methods, we treat audio as an auxiliary modality that assists to tackle noise in detection from visual regions. First, we use the audio-visual model to generate new ''ground-truth'' labels for the training set to remove noise between the visual features and noisy supervision. Second, we propose an ''indirect path'' between audio and class predictions, which combines the link between visual and audio regions, and the link between visual features and predictions. Third, we propose a sound-based ''attention path'' which uses the benefit of complementary audio cues to identify important visual regions. We use contrastive learning in our framework to perform region-based audio-visual instance discrimination for sound localization that is used as an intermediate task to benefit from the complementary cues from audio to boost object classification and detection performance. We show our methods to update noisy ground-truth and to provide an indirect path and attention path, greatly boosting performance on the AudioSet and VGGSound datasets compared to single-modality predictions, even ones that use contrastive learning. Our method outperforms previous weakly-supervised detectors for the task of object detection and our sound localization module performs better than several state-of-art methods on the AudioSet and MUSIC datasets.
 			</td>
 		</tr>
 	</table>
 	<br>
-
 	<hr>
-	<center><h1>Talk</h1></center>
-	<p align="center">
-		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
-	</p>
-
-	<table align=center width=800px>
-		<br>
-		<tr>
-			<center>
-				<span style="font-size:28px"><a href=''>[Slides]</a>
-				</span>
-			</center>
-		</tr>
-	</table>
-	<hr>
-
-	<center><h1>Code</h1></center>
+	<center><h1>Implementation Details</h1></center>
 
 	<table align=center width=420px>
 		<center>
@@ -238,68 +229,37 @@
 		<tr>
 			<td align=center width=400px>
 				<center>
-					<td><img class="round" style="width:450px" src="./resources/method_diagram.png"/></td>
+					<td><img class="round" style="width:750px" src="./resources/main_figure.png"/></td>
 				</center>
 			</td>
 		</tr>
 	</table>
-	<table align=center width=850px>
+	<table align= center width=850px>
 		<center>
 			<tr>
-				<td>
-					Short description if wanted
+				<td style="text-align:justify">
+					Before training the visual detector, we first extract at most 1000 visual proposals using <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11219/11078">Edge Boxes</a> from <a href="https://books.google.com/books/about/Dr_Dobb_s_Journal.html?id=gWlVAAAAMAAJ">OpenCV</a>. 
+					We choose Edge Boxes over other CNN-based alternatives because it is a generic, dataset-independent proposal generation technique, as opposed to other supervised 
+					CNN-based alternatives that are trained end-to-end using a specific dataset. We use <a href="https://proceedings.neurips.cc/paper/2019/file/bdbca288fee7f92f2bfa9f7012727740-Paper.pdf">Pytorch</a> as our training framework. A convolutional 
+					feature map is obtained using CNN layers of the <a href="https://arxiv.org/abs/1409.1556">VGG16</a> network pretrained with ImageNet before <a href="https://arxiv.org/abs/1703.06870">ROIAlign</a>, then the first 
+					two fully-connected (FC) layers are used as box classifier to extract visual features. We preserve the original aspect ratio of the images and resize them to five 
+					different scales {480, 576, 688, 864, 1200} as described in <a href="https://arxiv.org/abs/1511.02853">here</a>. As a type of data augmentation, we apply random horizontal flips to the images 
+					and choose a scale at random during training. At test time, we calculate the average outputs of 10 images (the 5 scales and their flips). The audio is separated into 
+					960 ms non-overlapping frames. A short-time Fourier transform is used to break down the 960 ms frames, with 25 ms windows every 10 ms. To prevent numerical difficulties, 
+					the resulting spectrogram is integrated into 64 mel-spaced frequency bins, and the magnitude of each bin is log-transformed after a slight offset is added. This produces 
+					log-mel spectrogram patches with 96 x 64 bins for each 0.96-second audio region. Before training the detector, offline we extract the audio conv feature maps for each region 
+					using CNN layers of the <a href="https://arxiv.org/abs/1609.09430">VGGish</a> network pre-trained on the large YouTube dataset. These are fed to two FC layers during training. 
+					We use the indirect path, attention path and the combination of paths only during inference. They are not part of the training, but the audio-visual similarity that they rely 
+					on is learned in training. The learnable temperature parameter &rho; is 0.07, and the weighting 
+					parameters &Lambda;<sub>1</sub>, &Lambda;<sub>2</sub>, and &Lambda;<sub>3</sub> are 0.6, 0.2 and 0.2, respectively. We observe different lambda values affect the speed of training. After all losses converge, 
+					the results become the same so our approach is not sensitive to the choice of lambdas to change the result. We use the <a href="https://arxiv.org/abs/1412.6980">Adam</a> optimizer by experimenting 
+					different learning rates and weight decays. The learning rate of 1e-5 and the weight decay of 5e-4 perform best for both dataset. While a batch size of 1 is used during audio-only and 
+					video-only training, we used the batch size B is 12 for joint training with the NCE contrastive loss. The models are jointly trained with 20K iterations.
 				</td>
 			</tr>
 		</center>
 	</table>
-	<table align=center width=800px>
-		<br>
-		<tr><center>
-			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
-			</center>
-		</span>
-	</table>
-	<br>
-	<hr>
-	<table align=center width=450px>
-		<center><h1>Paper and Supplementary Material</h1></center>
-		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-			<td><span style="font-size:14pt">F. Author, S. Author, T. Author.<br>
-				<b>Creative and Descriptive Paper Title.</b><br>
-				In Conference, 20XX.<br>
-				(hosted on <a href="">ArXiv</a>)<br>
-				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
-				<span style="font-size:4pt"><a href=""><br></a>
-				</span>
-			</td>
-		</tr>
-	</table>
-	<br>
-
-	<table align=center width=600px>
-		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
-			</center></td>
-		</tr>
-	</table>
-
 	<hr>
 	<br>
-
-	<table align=center width=900px>
-		<tr>
-			<td width=400px>
-				<left>
-					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
-				</left>
-			</td>
-		</tr>
-	</table>
-
-<br>
 </body>
 </html>
-
